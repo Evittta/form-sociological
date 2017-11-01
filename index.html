@@ -1,0 +1,139 @@
+<!doctype html> 
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-question.png">
+    <title>Опитування</title>
+</head>
+<body>
+    <form method="POST" action="https://formspree.io/vita.kusinya@gmail.com">
+        <h1>Чи вірите Ви в містику?</h1>
+        <fieldset>
+            <legend>Особисті дані</legend>
+                <ol>
+                    <li>Стать
+                        <br>
+                        <label>
+                            <input type="radio" name="gender" value="female"/>
+                            чоловіча
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="gender" value="male"/>
+                            жіноча
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="gender" value="other" checked/>
+                            інша
+                        </label>
+                    </li>
+                    <li>
+                        <label>Дата народження:
+                            <input type="date" name="birth" value="1990-01-01" required/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>Ви одружені?
+                            <input type="radio" name="marriage" value="yes" checked/>
+                            так
+                        </label>
+                        <label>
+                            <input type="radio" name="marriage" value="no"/>
+                            ні
+                        </label>
+                    </li>
+                </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Ставлення до забобонів</legend>
+                <ol start="4">
+                    <li>Чи вірите Ви в забобони?
+                        <label>
+                            <input type="checkbox" name="superstition" value="yes"/>
+                            так
+                        </label>
+                        <label>
+                            <input type="checkbox" name="superstition" value="no"/>
+                            ні
+                        </label>
+                        <label>
+                            <input type="checkbox" name="superstition" value="fifty-fifty" checked/>
+                            50:50
+                        </label>
+                    </li>
+                    <li>
+                        <label>На скільки сильно Ви вірите в забобони(від 0 до 10)?
+                            <input type="range" name="faith" min="0" max="10" step="1"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Скільки разів у Вас справджувались забобони?
+                            <input type="number" name="number-superstitions" min="0" value="0"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Опишіть які нещастя трапились з Вами через забобони?<br>
+                            <textarea name="story" rows="4" cols="60" placeholder="Введіть опис..."></textarea>
+                        </label>
+                    </li>
+                </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Чорна кішка</legend>
+                <ol start="8">
+                    <li>
+                        <label>
+                            Оберіть колір кішки,яка приносить нещастя:
+                            <input type="color" name="cat-color"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Ваша реакція на чорну кішку, яка перебігає Вам дорогу:
+                            <select name="black-cat">
+                                <option value="boggle">Йдете далі тремтячи від страху</option>
+                                <option value="nothing">Не звертаєте уваги</option>
+                                <option value="fear">Шукаєте інший шлях</option>
+                            </select>
+                        </label>
+                    </li>
+                </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Гороскоп</legend>
+                <ol start="10">
+                    <li>
+                        <label>
+                            Як часто Ви звертаєтесь до гороскопів?
+                            <select size="3" multiple>
+                                <option value="never" selected>Ніколи</option>
+                                <option value="regular">Регуярно</option>
+                                <option value="often">Дуже часто</option>
+                            </select>
+                        </label>
+                    </li>
+                    <li>Чи враховуєте Ви при виборі партнера сумісність зодіакальних знаків?
+                        <label>
+                            <input type="radio" name="horoscope" value="yes"/>
+                            так
+                        </label>
+                        <label>
+                            <input type="radio" name="horoscope" value="no" checked/>
+                            ні
+                        </label>
+                    </li>
+                </ol>
+        </fieldset>
+        <br>
+        <input type="submit" value="Відправити"/>
+        <input type="reset" value="Скасувати"/>
+    </form>
+    <br>
+    <a href="table.html">Перйти на наступну сторінку</a>
+</body>
+</html>
